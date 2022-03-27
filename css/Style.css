@@ -1,0 +1,958 @@
+/* ---------------- Global Classes ---------------
+
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--Lexend);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 0 5vw;
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+p {
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+
+/* ------x------- Global Classes -------x-------*/
+/* .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    justify-content: space-between;
+    transition: height .8s ease-in-out;
+}
+
+.text-gray{
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Abel);
+    font-weight: bold;
+}
+
+.nav-items{
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+.nav-link{
+    position: relative;
+    padding: 1.6rem 1rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-family: var(--Abel);
+    color: var(--text-gray);
+    text-transform: capitalize;
+    transition: background .4s ease-in-out;
+}
+.nav-items .nav-link:hover {
+    background-color: #104f55;
+}
+.nav-items .nav-link:hover a {
+    color: white;
+}
+.nav-icon{
+    padding: 1.4rem 0;
+}
+.nav-icon i{
+    padding: 0 .2rem;
+    color: var(--text-gray);
+}
+.nav-icon i:hover {
+    color: #a1c4cf;
+}
+.btn-icon{
+    width: 80%;
+    cursor: pointer;
+    display: none;
+}
+.btn-icon .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+.btn-icon .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+@media(max-width:758px){
+.nav-items-parent , .nav-icon{
+    display: none;
+}
+.btn-icon{
+    display: inline;
+}
+
+}  */
+/* ---------------- Global Classes ---------------*/
+@import url('../css/fonts.css');
+html,
+body {
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root {
+    /*      Theme colors        */
+    --text-gray: #3f4954;
+    --text-light: #686666da;
+    --bg-color: #0f0f0f;
+    --white: #ffffff;
+    --midnight: #104f55;
+    /* gradient color   */
+    --sky: linear-gradient(120deg, #6c99e0, #cdefff, #6c99e0);
+    /*      theme font-family   */
+    --Abel: 'Abel', cursive;
+    --Anton: 'Anton', cursive;
+    --Josefin: 'Josefin', cursive;
+    --Lexend: 'Lexend', cursive;
+    --Livvic: 'Livvic', cursive;
+}
+a {
+    text-decoration: none;
+    color: var(--text-gray);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    font-family: var(--Lexend);
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-family: var(--Lexend);
+}
+
+h3 {
+    font-family: var(--Abel);
+    font-size: 1.3rem;
+}
+
+button.btn {
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: var(--Livvic);
+    cursor: pointer;
+}
+
+span {
+    font-family: var(--Abel);
+}
+
+.container {
+    margin: 0 5vw;
+}
+
+.text-gray {
+    color: var(--text-gray);
+}
+
+p {
+    font-family: var(--Lexend);
+    color: var(--text-light);
+}
+
+
+/* ------x------- Global Classes -------x-------*/
+
+
+/* --------------- navbar ----------------- */
+
+.nav {
+    background: white;
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height .8s ease-in-out;
+}
+
+.nav .nav-menu {
+    justify-content: space-between;
+}
+
+.nav .toggle-collapse {
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+    display: none;
+}
+
+.nav .toggle-collapse .toggle-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+
+.nav .toggle-collapse .toggle-icons i {
+    font-size: 1.4rem;
+    color: var(--text-gray);
+}
+
+.collapse {
+    height: 30rem;
+}
+
+.nav .nav-items {
+    display: flex;
+    margin: 0;
+}
+
+.nav .nav-items .nav-link {
+    position: relative;
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    font-family: var(--Abel);
+    text-transform: capitalize;
+    transition: background .4s ease-in-out;
+}
+
+.nav .nav-items .nav-link:hover {
+    background-color: #104f55;
+}
+
+.nav .nav-items .nav-link:hover a {
+    color: white;
+}
+
+.nav .nav-brand a {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    display: block;
+    font-family: var(--Abel);
+    font-weight: bold;
+}
+
+.nav .social {
+    padding: 1.4rem 0;
+}
+
+.nav .social i {
+    padding: 0 .2rem;
+}
+
+.nav .social i:hover {
+    color: #a1c4cf;
+}
+
+/* -------x------- navbar ---------x------- */
+.site-background{
+    background-image:url('../photo/pexels-andrea-piacquadio-3769138.jpg');
+    background-size:cover;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+.site-title{
+    text-align: center;
+    color:  rgba(184, 224, 236, 0.952);
+    padding-top: 15rem;
+
+}
+main .site-title h1,
+h3 {
+    margin: .3rem;
+}
+
+
+
+.wrap {
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button {
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #313133;
+    background: #4FD1C5;
+  background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(79,209,197,.64);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  button::before {
+  content: '';
+    border-radius: 1000px;
+    min-width: calc(300px + 12px);
+    min-height: calc(60px + 12px);
+    border: 6px solid #00FFCB;
+    box-shadow: 0 0 60px rgba(0,255,203,.64);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+  }
+  
+  .button:hover, .button:focus {
+    color: #313133;
+    transform: translateY(-6px);
+  }
+  
+  button:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  button::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #00FFCB;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+  }
+  
+  button:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
+  /* fly 1 */
+  
+
+  .abdo-title{
+    color: rgba(13,13,14,1);
+    font-family: 'Prata';
+    font-weight: normal;
+    text-transform: none;
+    font-size: 3rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+}
+.abdo-contact{
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+.abdo-containers{
+    width: 24%;
+    margin:auto;
+    box-sizing: border-box;
+
+}
+.abdo-back1{
+    background-image: url(../photo/feather-plane-1-300x300.jpg);
+    background-size: cover;
+    width: 100%;
+    height:290px;
+    position: relative;
+    animation: pulse 2s infinite;
+    border-radius: 50%;
+}
+.abdo-back2{
+    background-image: url(../photo/light-jet-300x300.jpg);
+    background-size: cover;
+    width: 100%;
+    height:290px;
+    position: relative;
+    animation: pulse 2s infinite;
+    border-radius: 50%;
+}
+.abdo-back3{
+    background-image: url(../photo/helicopter-1-300x300.jpg);
+    background-size: cover;
+    width: 100%;
+    height:290px;
+    position: relative;
+    animation: pulse 2s infinite;
+    border-radius: 50%;
+}
+.abdo-back4{
+    background-image: url(../photo/large-plane-1-300x300.jpg);
+    background-size: cover;
+    width: 100%;
+    height:290px;
+    position: relative;
+    animation: pulse 2s infinite;
+    border-radius: 50%;
+}
+.abdo-header{
+    margin-top: 40px;
+    text-align: center;
+}
+.abdo-h1{
+    color: rgba(9,9,11,1);
+    font-family: 'Muli';
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    letter-spacing: 0.02em;
+}
+.abdo-paragraph{
+    letter-spacing: 1px;
+    color: rgba(168,152,126,1);
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+}
+.fly-parent-ground{
+    margin-top: 50px;
+    width: 100%;
+    height: 240px;
+    padding-left:22%;
+}
+.fly-ground{
+    width: 100%;
+    height: 100%;
+    background-image:url("../photo/plane-side-768x240.jpg");
+    background-repeat:no-repeat;
+    background-size: 60% 100%;
+    padding-top: 37px;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(168, 63, 57, 0.4);
+    }
+    5% {
+        transform: scale(1.01);
+    }
+    15% {
+        transform: scale(1);
+    }
+    70% {
+        box-shadow: 0 0 0 50px rgba(168, 63, 57, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 100px rgba(168, 63, 57, 0);
+    }
+}
+
+
+
+
+@media(max-width:1100px) and (min-width:601px){
+    .abdo-containers{
+        max-width:42% ;
+        flex: 42%;
+        margin-bottom: 20px;
+    }
+    .abdo-parent-ground{
+        padding: auto;
+    }
+    .abdo-back1{
+        background-image: url(../photo/feather-plane-1-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }    
+    .abdo-back2{
+        background-image: url(../photo/light-jet-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }
+    .abdo-back3{
+        background-image: url(../photo/helicopter-1-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }
+    .abdo-back4{
+        background-image: url(../photo/large-plane-1-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }  
+    
+
+}
+@media(max-width:600px){
+    .abdo-containers{
+        max-width:98% ;
+        flex: 98%;
+        margin-bottom: 20px;
+    }
+    .abdo-parent-ground{
+
+        padding-left: 19%;
+    }
+    .abdo-back1{
+        background-image: url(../photo/feather-plane-1-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }    
+    .abdo-back2{
+        background-image: url(../photo/light-jet-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }
+    .abdo-back3{
+        background-image: url(../photo/helicopter-1-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }
+    .abdo-back4{
+        background-image: url(../photo/large-plane-1-300x300.jpg);
+        background-size: 100% 300px;
+        background-repeat:no-repeat;
+
+
+    }   
+}
+/* start fly 2 */
+  
+.abdo1-contact {
+    background-color: #f5f3f1;
+}
+
+.title {
+    color: rgba(13, 13, 14, 1);
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+    margin-bottom: 70px;
+    font-family: 'Prata';
+    font-weight: normal;
+    text-transform: none;
+    font-size: 3.5rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+
+.abdo1-container1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.abdo1-header {
+    width: 28%;
+    height: 350px;
+    margin-right: 10%;
+}
+
+.abdo1-h1 {
+    margin-top: 70px;
+    color: rgba(9, 9, 11, 1);
+    font-family: 'Muli';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4375rem;
+    letter-spacing: 0.02em;
+    margin-left: 10%;
+}
+
+.abdo1-paragraph {
+    letter-spacing: 1px;
+    color: rgba(81, 80, 80, 1);
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    line-height: 30px;
+}
+
+.abdo1-header2 {
+    width: 55%;
+    height: 511px;
+    margin-left: 5%;
+    background-image: url("../photo/adobestock_1417261-768x511.jpg");
+    background-size: 100% 511px
+}
+
+.abdo1-container2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding-bottom: 100px;
+}
+
+.abdo1-header3 {
+    width: 55%;
+    height: 512px;
+    margin-left: 2%;
+    background-image: url(../photo/adobestock_98400582-768x512.jpg);
+    background-size: 98% 511px;
+    transform: translate(-7px, -100px);
+    background-repeat: no-repeat;
+}
+
+.abdo1-header1 {
+    width: 28%;
+    height: 350px;
+    margin-left: 8%;
+    margin-top: 25px;
+}
+
+.abdo1-h2 {
+    margin-top: 160px;
+    color: rgba(9, 9, 11, 1);
+    font-family: 'Muli';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4375rem;
+    letter-spacing: 0.02em;
+    margin-left: 10%;
+}
+
+.abdo1-paragraph1 {
+    letter-spacing: 1px;
+    color: rgba(81, 80, 80, 1);
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    line-height: 30px;
+}
+
+@media(max-width:900px) {
+    .abdo1-header,
+    .abdo1-header2,
+    .abdo1-header3,
+    .abdo1-header1 {
+        max-width: 98%;
+        flex: 98%;
+        margin-bottom: 20px;
+        margin-left: 1%;
+    }
+    .abdo1-header3 {
+        transform: translate(0px, 0px);
+    }
+    .title{
+        font-size: 3.1em;
+    }
+}
+/* end fly 2 */
+.abdo3-title{
+    color: rgba(13,13,14,1);
+    width: 56%;
+    text-align: center;
+    margin-left: 27%;
+    margin-bottom: 70px;
+    font-family: 'Prata';
+    font-weight: normal;
+    text-transform: none;
+    font-size: 3.5rem;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+}
+.abdo3-contact-us{
+    display: flex;
+    flex-wrap: wrap;
+}
+.abdo3-container{
+    width: 20%;
+    margin-top: 125px;
+}
+.abdo3-ground{
+    width: 50%;
+    height: 655px;
+    padding-left: 10%;
+}
+.abdo3-img{
+    width: 100%;
+    height: 100%;
+    background-image:url("../photo/plane-1-768x848.jpg");
+    background-size:90% 650px;
+    background-repeat:no-repeat;
+}
+.abdo3-container1{
+    width: 20%;
+    margin-top: 125px;
+}
+.abdo3-p{
+    letter-spacing: 1px;
+    color: rgba(168,152,126,1);
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    line-height: 35px;
+}
+.abdo3-h5{
+    margin-left: 10%;
+}
+@media(max-width:920px){
+.abdo3-container , .abdo3-ground , .abdo3-container1{
+    width: 90%;
+    text-align: center;
+}
+.abdo3-title{
+    font-size: 2.5rem;
+}
+}
+.abdo4-contact{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.abdo4-slider1{
+    width: 25%;
+}
+.abdo4-slider2{
+    width: 60%;
+}
+.abdo4-img{
+    animation: abdo 30s infinite alternate;
+    transition: all 0.5 ease-in-out;
+    width: 100%;
+    height: 650px;
+    background-image:url("../photo/man-plane-1-small.jpg");
+    background-size:100% 650px;
+    transform: translate(85px, 240px);
+}
+@keyframes abdo {
+    0% {
+        background-image:url("../photo/man-plane-1-small.jpg");
+
+    }
+    25% {
+        background-image:url("../photo/private-plane-1-small.jpg");
+
+    }
+    50% {
+        background-image:url("../photo/corporate-jet-1-small.jpg");
+
+    }
+    75% {
+        background-image:url("../photo/private-plane-1-small.jpg");
+
+    }
+    100% {
+        background-image:url("../photo/man-plane-1-small.jpg");
+ 
+    }
+}
+.abdo4-container1{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 30%;
+    background-color:#f5f3f1
+}
+.abdo4-header1,.abdo4-header2{
+    width: 40%;
+    margin: 4%;
+}
+.abdo4-p {
+    letter-spacing: 1px;
+    color: rgba(168, 152, 126, 1);
+    width: 90%;
+    margin-top: 10px;
+    margin-left: auto;
+    line-height: 35px;
+}
+.abdo4-h5 {
+    margin-top: 15px;
+    color: rgba(9, 9, 11, 1);
+    font-family: 'Muli';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.4375rem;
+    letter-spacing: 0.02em;
+    margin-left: 10%;
+}
+@media(max-width:900px) {
+    .abdo4-slider1,.abdo4-slider2,.abdo4-header1,.abdo4-header2{
+        width: 100%;
+        margin-right: 5%;
+    }
+    .abdo4-header1,.abdo4-header2{
+        padding-right: 40%;
+    }
+    .abdo4-img{
+        animation: abdo 15s infinite alternate;
+        transition: animation 0.5 ease-in-out;
+        width: 90%;
+        height: 400px;
+        background-image:url("../photo/man-plane-1-small.jpg");
+        background-size:100% 400px;
+        transform: translate(0px, 0px);
+        margin-left: 7%;
+        display: block;
+    }
+    .abdo4-p {
+        letter-spacing: 1px;
+        color: rgba(168, 152, 126, 1);
+        width: 90%;
+        margin-top: 10px;
+        line-height: 35px;
+    }
+    .abdo4-h5 {
+        margin-top: 15px;
+        color: rgba(9, 9, 11, 1);
+        font-family: 'Muli';
+        font-weight: 500;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+    }
+}
+/* ----------------- Footer --------------------- */
+
+footer.footer {
+    height: 100%;
+    background: var(--bg-color);
+    position: relative;
+}
+
+footer.footer .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container>div {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem .9rem;
+}
+
+footer.footer .instagram div>img {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+
+footer.footer .container h2 {
+    color: var(--white);
+}
+
+footer.footer .newsletter .form-element {
+    background: black;
+    display: inline-block;
+}
+
+footer.footer .newsletter .form-element input {
+    padding: .5rem .7rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: var(--Josefin);
+    font-size: 1rem;
+    width: 74%;
+}
+
+footer.footer .follow div i {
+    color: var(--white);
+    padding: 0 .4rem;
+}
+
+footer.footer .newsletter .form-element span {
+    background: #6c99e0;
+    padding: .5rem .7rem;
+    cursor: pointer;
+}
+
+footer.footer .rights {
+    justify-content: center;
+    font-family: var(--Josefin);
+    line-height: 25px;
+}
+
+footer.footer .rights a,
+footer.footer .move-up span {
+    cursor: pointer;
+    color: #6c99e0;
+}
+
+footer.footer .move-up {
+    position: absolute;
+    right: 6%;
+    top: 50%;
+}
+
+
+/* ---------x------- Footer ----------x---------- */
